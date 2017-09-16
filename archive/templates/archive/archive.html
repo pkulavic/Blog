@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Archive</h2>
+<ul style="padding-left: 5px;">
+  {% for article in articles %}
+  <li style="list-style-type: none; padding-bottom: 5px"> • {{ article.created|date }}: <a href="/{{ article.slug }}/"> {{ article }}</a></li>
+  {% endfor %}
+</ul>
+{% endblock %}
